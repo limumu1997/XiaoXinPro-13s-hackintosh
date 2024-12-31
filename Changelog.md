@@ -1,4 +1,8 @@
-## XiaoXinPro-13-hackintosh EFI Changelog
+## XiaoXinPro-13s-hackintosh EFI Changelog
+
+- 2024-12-31
+  - 1 `OC、kexts` 编辑版更新
+  - 可能支持 macOS 14 Sonoma
 
 - 2023-06-10
   - 1 `boot-args` 添加 `-lilubeta debug=0x100 -v`（重置 `NVRAM` 生效）。

@@ -1,13 +1,24 @@
-# XiaoXinPro-13-hackintosh
+# XiaoXinPro-13s-hackintosh
 
-## Lenovo XiaoXin Pro 13 2019&2020 Hackintosh
-### 适用：`2019 & 2020款小新pro13(s) Intel版本`
+# 感谢前人的贡献付出
+最近迷恋macOS系统，拿出闲置了几年的小新pro13s折腾一番。结合前辈们的EFI和现在最新的驱动，现在已得出一个稳定满足日常使用的版本。笔记本硬件无任何改动，仅开启了BIOS的高级模式。如果不能正常使用此EFI可访问原库Wiki参考资料。
+
+  ![Work](./screenshot/Work.png)
+
+
+## 不正常工作
+- ~~睡眠~~ (小新PRO13不能真正睡眠，可以仿真睡眠。唤醒比较困难，`OC` 下唤醒方法是：`电源键`唤醒)
+- 声卡MIC(`暂时解决方法`：启动台-声音-输入：手动切换到“`外接可用麦克风设备`”), 了解[更多](https://github.com/daliansky/XiaoXinPro-13-hackintosh/wiki/%E5%A3%B0%E5%8D%A1)
+
+
+## Lenovo XiaoXin Pro 13s 2020 Hackintosh
+### 适用：`2020款小新pro13s Intel版本`
 ## 电脑配置
 |规格 | [详细信息](https://item.lenovo.com.cn/product/1007854.html) |
 |:-: | :-:|
 |电脑型号|联想小新pro13 笔记本电脑|
-|操作系统|macOS （Monterey / Big Sur / Catalina / Mojave(`声卡异常`) |
-|处理器|英特尔 酷睿 i5 - 10210U / i7-10710U|
+|操作系统|macOS Ventura/ Catalina |
+|处理器|英特尔 酷睿 i5 - 10210U |
 |内存|16GB板载无法更换|
 |硬盘|PCIEX4，[混搭](https://zhuanlan.zhihu.com/p/89874980), 以下针对安装 macOS 下说明 |
 |显卡|Intel HD Graphics CFL CRB|（UHD620）|
@@ -108,25 +119,3 @@
 
 - 其它 `ACPI` 补丁修复采用 `hotpatch` 方式，文件位于 `/ACPI/patched`
 
-## 不正常工作
-- ~~睡眠~~ (小新PRO13不能真正睡眠，可以仿真睡眠。唤醒比较困难，`OC` 下唤醒方法是：`电源键`唤醒)
-- 声卡MIC(`暂时解决方法`：启动台-声音-输入：手动切换到“`外接可用麦克风设备`”), 了解[更多](https://github.com/daliansky/XiaoXinPro-13-hackintosh/wiki/%E5%A3%B0%E5%8D%A1)
-<details>
-<summary>关于 小新PRO13(2019/2020/13S Intel版本) 没有S3睡眠延展</summary>
-<p>D0 就是正常工作状态，S0 是 D0 的电源管理，S0睡眠应该是不存在的，说 S0 睡眠，本质就是 D0 状态下进入了空闲，所以有了空闲状态下的电源管理，这个机器没有 S3睡眠，没有设计相关硬件</p>
-<p>但因 ACPI 有了 S3才导致苹果试图进入睡眠，但因缺少必须的硬件最终失败，对于 Windows 不妨碍</p>更详细的说明移步<a href="https://github.com/daliansky/OC-little" target="_blank">OC-little</a>
-</details>
-
-## 拓展
-- 开启 [HIDPI](https://github.com/xzhih/one-key-hidpi) 来提升系统UI质量, `可能会出现花(黑)屏现象`
-
-## QQ群
-- 小新pro黑苹果    946132482  未满
-- 小新pro黑苹果技术群 673294583 未满
-- 小新pro13 黑苹果 insyde bios研究群 635160015  未满
-### 为了更好地理解你遇到的问题，强烈建议：
-- 先看 **[wiki](https://github.com/daliansky/XiaoXinPro-13-hackintosh/wiki)**   
-- 不行就自行排错：例如：`重建缓存`，`重启`
-- 贴`小新pro13的硬件信息`(如鲁大师截图)
-- 提供 `详细描述操作过程`
-- 提供 `日志` 或 `完整截图`
